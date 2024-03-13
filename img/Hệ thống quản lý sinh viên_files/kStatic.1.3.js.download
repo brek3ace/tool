@@ -1,0 +1,311 @@
+﻿$(function () {
+    $(window).scroll(function () {
+        var op = $(window).scrollTop() / $(window).height();
+        op = op > 1 ? 1 : op;
+        $("#goTop").stop().animate({ 'opacity': op }, 10);
+    });
+});
+
+$(document).ready(function () {
+    $("#portal-new-sub").hide();
+    $('h4').click(function () {
+        if ($("#portal-new-sub").is(':hidden') == false) {
+            $("#portal-new-sub").hide();
+        } else {
+            $("#portal-new-sub").slideDown('normal');
+            return false;
+        }
+    }).next().hide();
+    $('body').click(function (event) {
+        $(this).find('#portal-new-sub').hide();
+    });
+});
+
+function _void() {
+    return;
+}
+function checkMail(email) {
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (filter.test(email))
+        return true;
+    else
+        return false;
+}
+function resizeImage(contentid, maxwidth) {
+    var obj = document.getElementById(contentid);
+    if (obj != undefined) {
+        imgs = obj.getElementsByTagName("img");
+        for (p = 0; p < imgs.length; p++) {
+            w = parseInt(imgs[p].width);
+            h = parseInt(imgs[p].height);
+            if (parseInt(imgs[p].width) > maxwidth) {
+                imgs[p].style.cursor = "pointer";
+                imgs[p].onclick = new Function("iw=window.open(this.src,'ImageViewer','resizable=1');iw.focus()");
+                imgs[p].height = (maxwidth / imgs[p].width) * imgs[p].height;
+                imgs[p].width = maxwidth;
+                imgs[p].title = "Click vào hình xem kích thước đầy đủ";
+            }
+        }
+    }
+}
+function setHomepage() {
+    if (document.all) {
+        document.body.style.behavior = 'url(#default#homepage)';
+        document.body.setHomePage('http://qlcl.edu.vn');
+    } else if (window.sidebar) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            } catch (e) {
+                alert("Bạn cần nhấn vào nút Allow để cho phép qlcl.edu.vn đặt làm trang chủ cho trình duyệt web của Bạn");
+            }
+        }
+        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+        prefs.setCharPref('browser.startup.homepage', 'http://qlcl.edu.vn');
+    }
+}
+
+function checkAlert(aspnetForm, setvalue, Msg) {
+    var removeList = '';
+    var check = false;
+    for (var i = 0; i < aspnetForm.elements.length; i++) {
+        if (aspnetForm.elements[i].type == "checkbox") {
+            if (aspnetForm.elements[i].checked) {
+                if (aspnetForm.elements[i].value == "vnk") {
+                    check = true;
+                }
+                if (aspnetForm.elements[i].name.substr(0, 8) == 'kChoose_') {
+                    removeList += ',' + aspnetForm.elements[i].name.substring(8);
+                }
+            }
+        }
+    }
+    if (!check) {
+        alert(Msg);
+        return false;
+    }
+    if (removeList == '') return false;
+    removeList = removeList.substring(1);
+    aspnetForm.kevent.value = setvalue; aspnetForm.klist.value = removeList;
+    return aspnetForm.submit();
+}
+function checkNotAlert(aspnetForm, setvalue) {
+    var removeList = '';
+    var check = false;
+    for (var i = 0; i < aspnetForm.elements.length; i++) {
+        if (aspnetForm.elements[i].type == "checkbox") {
+            if (aspnetForm.elements[i].checked) {
+                if (aspnetForm.elements[i].value == "vnk") {
+                    check = true;
+                }
+                if (aspnetForm.elements[i].name.substr(0, 8) == 'kChoose_') {
+                    removeList += ',' + aspnetForm.elements[i].name.substring(8);
+                }
+            }
+        }
+    }
+    if (removeList != '')
+        removeList = removeList.substring(1);
+    aspnetForm.kevent.value = setvalue; aspnetForm.klist.value = removeList;
+    return aspnetForm.submit();
+}
+function GetPostVariable(vName, vDef) {
+    var str = location.href;
+    var pos = str.indexOf('?'.concat(vName).concat('='));
+    if (pos == -1) {
+        pos = str.indexOf('&'.concat(vName).concat('='));
+        if (pos == -1) return vDef;
+    }
+    str = str.substring(pos + vName.length + 2);
+    pos = str.indexOf('&');
+    if (pos == -1) {
+        pos = str.length;
+    }
+    if (pos > 0) {
+        str = str.substring(0, pos);
+    }
+    return str;
+}
+var delay = (function () {
+    var timer = 0;
+    return function (callback, ms) {
+        clearTimeout(timer);
+        timer = setTimeout(callback, ms);
+    };
+})();
+jQuery.fn.filterByText = function (textbox) {
+    return this.each(function () {
+        var select = this;
+        var options = [];
+        $(select).find('option').each(function () {
+            options.push({ value: $(this).val(), text: $(this).text() });
+        });
+        $(select).data('options', options);
+
+        $(textbox).bind('keyup', function () {
+            delay(function () {
+                var options = $(select).empty().data('options');
+                var search = $.trim($(textbox).val());
+                var regex = new RegExp(search, "gi");
+
+                $.each(options, function (i) {
+                    var option = options[i];
+                    if (option.text.match(regex) !== null) {
+                        $(select).append(
+                            $('<option>').text(option.text).val(option.value)
+                        );
+                    }
+                });
+            }, 500);
+        });
+    });
+};
+var kPortal = new Object({
+    _u: kvirtualroot,
+    _nav: navigator,
+    _document: document,
+    _eurc: function (s) {
+        return encodeURIComponent(s);
+    },
+    LoadImg: function (URL) {
+        var img = new Image(1, 1);
+        img.src = URL;
+        img.onload = _void;
+    },
+    LoadJs: function (URL) {
+        var sc = this._document.createElement('script');
+        sc.type = 'text/javascript';
+        sc.src = URL + '&f=vnkweb.js';
+        this._document.getElementsByTagName('head')[0].appendChild(sc);
+    },
+    LoadURL: function (cmd) {
+        var _r = this._eurc(window.location.href);
+        var _f = this._eurc(this._document.referrer);
+        var _t = this._eurc(this._document.title);
+        var _p = this._eurc(this._document.location.protocol);
+        var _v = kverify;
+        var _s = "";
+        if (self.screen) {
+            _s = screen.width + 'x' + screen.height;
+        }
+        var URL = this._u + "?"
+            + "cmd=" + cmd
+            + "&p=" + _p
+            + "&t=" + _t
+            + "&f=" + _f
+            + "&r=" + _r
+            + "&s=" + _s
+            + "&v=" + _v;
+        return URL;
+    },
+    Init: function () {
+        //this.LoadImg(this.LoadURL('hitcount'));
+    },
+    SetMenu: function (modul, ctr) {
+        $('#mn_' + modul).addClass('selected');
+        if (ctr != '')
+            $('#sub_' + ctr).addClass('active');
+    },
+    SetAlert: function (mn, n) {
+        var $obj = document.getElementById(mn);
+        for (var i = 0; i < $obj.childNodes.length; i++) {
+            if ($obj.childNodes[i].className == 'count')
+                $obj.childNodes[i].innerHTML = n;
+        }
+    },
+    SetAlertMenuTop: function (mn, n) {
+        if (n > 0) {
+            $('#' + mn + ' a').append('<span class="i-count">' + n + '</span>');
+        }
+    },
+    NewsCount: function () {
+        var str = location.href;
+        if (str.indexOf('detail') > 0) {
+            if (vnkID != undefined) {
+                var id = vnkID;
+                this.LoadImg(this.LoadURL('news') + "&a=" + id);
+            }
+        }
+        return true;
+    },
+    Comment: function () {
+        var nickname = document.getElementById('inpNickname');
+        var email = document.getElementById('inpEmail');
+        var website = document.getElementById('inpWebsite');
+        var content = document.getElementById('inpContent');
+        var str = location.href;
+        if (str.indexOf('detail') > 0) {
+            if (vnkID != undefined) {
+                var id = vnkID;
+                var url = this.LoadURL('comment') + '&modul=' + vnkModul + '&id=' + id;
+                $.post(url, { 'n': nickname.value, 'e': email.value, 'w': website.value, 'c': content.value },
+                    function () { alert('Bình luận của bạn đã được gửi thành công!'); content.value = ''; });
+            }
+        }
+        return true;
+    },
+    OpenDialog: function (url, width, minheight, top, ispercent) {
+        if (width == null) width = 600;
+        if (minheight == null) minheight = 400;
+        if (top == null) top = 60;
+        if (ispercent == null) ispercent = 0;
+        $('body').append('<div id="kZoom" style="padding-top: ' + top + 'px"><div class="k-dialog" style="width: ' + width + (ispercent ? '%' : 'px') + '; min-height: ' + minheight + (ispercent ? '%' : 'px') + ';"><a href="javascript:void(0)" class="x-close"><span class="close"></span></a><div id="kbox"></div></div></div>');
+        $('body').addClass('noscroll');
+        $('.x-close').click(function () { kPortal.CloseBox(); });
+        $('#kbox').html('<div>Đang tải...<img src="/vnkresource/images/loading.gif"></div>');
+        $('#kbox').load(url, (function (response, status, xhr) {
+            if (status == "error") {
+                var msg = "Sorry but there was an error: "; $("#kbox").html(msg + xhr.status + " " + xhr.statusText);
+            }
+        }));
+
+        $(document).keyup(kPortal.CloseBoxKey);
+    },
+    LoadBox: function (url) {
+        $('body').append('<div id="kZoom" class=""><div class="kboxpanel" id="kbox"></div></div>');
+        $('body').addClass('noscroll');
+        $('#kZoom').click(function () {
+            if (!kPortal._isbox)
+                kPortal.CloseBox();
+            kPortal._isbox = false;
+        });
+        $('#kbox').click(function () {
+            kPortal._isbox = true;
+        });
+        $('#kbox').load(url + ' #content', (function () { }));
+    },
+    CloseBoxKey: function (e) {
+        if (e.which == 27) {
+            kPortal.CloseBox();
+            e.preventDefault();
+        }
+    },
+    CloseBox: function () {
+        parent.$('body').removeClass('noscroll');
+        parent.$('#kZoom').remove();
+        $(document).unbind('keyup', kPortal.CloseBoxKey);
+    },
+    kBox: function (css) {
+        $(css).click(function () {
+            kPortal.LoadBox($(this).attr('href'));
+            return false;
+        });
+    },
+    _isbox: false,
+    checkSelect: function (objF, objS) {
+        var check = false;
+        fields = document.getElementById(objF);
+        next = document.getElementById(objS);
+        for (var j = 0; j < fields.options.length; j++) {
+            if (fields.options[j].selected) {
+                check = true;
+                $(next).append('<option value="' + fields.options[j].value + '">' + fields.options[j].text + '</option>');
+            }
+        }
+        $("#" + objF + " option:selected").remove();
+        if (!check) {
+            alert('Bạn phải chọn ít nhất một bản ghi cần chuyển.');
+            return false;
+        }
+    }
+});

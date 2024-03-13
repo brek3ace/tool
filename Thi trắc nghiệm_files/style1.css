@@ -1,0 +1,605 @@
+@font-face {
+    font-family: "FrenchVanilla";
+    src: url("UTM French Vanilla.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    background-color: #10a3ee;
+    border: 0 none;
+    height: 4px;
+    margin: 0 auto;
+    width: 98%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    display: inline;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a img {
+    border: medium none;
+}
+
+ul,
+li {
+    list-style-image: none;
+    list-style-type: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+    outline: medium none;
+    text-decoration: none !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.green {
+    color: green;
+}
+
+.c10a3ee {
+    color: #10a3ee;
+}
+
+.blue {
+    color: blue;
+}
+
+.an {
+    display: none;
+}
+
+.an_bg {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+}
+
+.u {
+    text-decoration: underline;
+}
+
+.p10 {
+    padding: 10px;
+}
+
+.p15 {
+    padding: 15px;
+}
+
+.mt0 {
+    margin-top: 0 !important;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt40 {
+    margin-top: 40px !important;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.ml75 {
+    margin-left: 75px !important;
+}
+
+.ml120 {
+    margin-left: 120px !important;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.pl96 {
+    padding-left: 96px !important;
+}
+
+.w50 {
+    width: 50px;
+}
+
+.w80 {
+    width: 80px;
+}
+
+.w120 {
+    width: 120px;
+}
+
+.relative {
+    position: relative;
+}
+
+.abcd {
+    position: absolute;
+    top: 32px;
+    font-size: 20px;
+    font-weight: bold;
+    left: 22px;
+    color: #777;
+}
+
+body {
+    background: rgba(0, 0, 0, 0) url("/images/background.png") repeat scroll top center;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+header {
+    /* background-color: #00AFEF; */
+    background-color: #8c1515;
+    min-height: 115px;
+}
+
+.container {
+    width: 970px !important;
+    margin: 0 auto;
+}
+
+.title {
+    background: rgba(0, 0, 0, 0) url("/images/title_background.png") repeat scroll 0 0;
+    color: lightslategrey;
+    font-size: 25px;
+    min-height: 80px;
+    line-height: 80px;
+    width: 100%;
+}
+
+.title img {
+    height: 46px;
+    margin-top: -9px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.header_left {
+    float: left;
+    padding-left: 10px;
+    color: white;
+    font-size: 29px;
+    line-height: 45px;
+}
+
+.header_right {
+    float: right;
+    padding-right: 10px;
+}
+
+.header_right img {
+    width: 40px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.white {
+    background-color: white;
+}
+
+.ul_setting {
+    left: auto;
+    right: -25px !important;
+}
+
+.cauhoi {
+    display: inline-block;
+    width: 100%;
+}
+
+.cauhoi_stt {
+    /* background: #00afef none repeat scroll 0 0; */
+    background-color: #942626 !important;
+    color: white;
+    line-height: 18px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 10px;
+    padding: 7px 0;
+    text-align: center;
+    width: 80px;
+    border-radius: 4px;
+    float: left;
+}
+
+.cauhoi_content {}
+
+.funkyradio {
+    padding-left: 35px;
+}
+
+.funkyradio input[type="radio"]:empty~label,
+.funkyradio input[type="checkbox"]:empty~label {
+    padding-left: 45px;
+    text-indent: 0px !important;
+}
+
+.dungsai {
+    position: absolute;
+    right: 21px;
+    top: 31px;
+}
+
+.dungsai>img {
+    width: 30px;
+}
+
+.timer_container {
+    background-color: #00afef;
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    bottom: 10px;
+}
+
+.timer {
+    color: white;
+    font-size: 35px !important;
+    height: 40px;
+    line-height: 31px;
+    width: 130px;
+}
+
+.progress {
+    margin-bottom: 0;
+    width: 130px;
+}
+
+.gototop {
+    background-color: lightcyan;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.logo {
+    padding: 12px 0;
+    float: left;
+    display: block;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.usermenu {
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 10px;
+}
+
+.text-header {
+    padding-top: 13px;
+    display: block;
+    padding-left: 15px;
+    float: left;
+    overflow: hidden;
+    width: min-content;
+}
+
+.text-header img {
+    margin: 7px 0px;
+}
+
+.baithi {
+    padding-bottom: 100px;
+}
+
+.funkyradio p {
+    margin: 0;
+}
+
+.MathJax_Display {
+    display: inline !important;
+    margin: 0 5px;
+}
+
+.MJX_Assistive_MathML {
+    display: none;
+}
+
+.MathJax_Preview {
+    display: none;
+}
+
+.container_content {
+    min-height: 700px;
+}
+
+.footer1 {
+    /* background-color: #00afef; */
+    background-color: #8c1515;
+    min-height: 100px;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    font-size: 17px;
+}
+
+.logo_textbanner {
+    min-height: 115px;
+    overflow: hidden;
+}
+
+.pagination {
+    float: right;
+}
+
+.pagination .active {
+    background-color: lightskyblue;
+    color: white;
+    font-weight: bold;
+}
+
+.baidathi {
+    float: right;
+    bottom: -45px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.userinfo {
+    bottom: -73px;
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+    right: 10px;
+    text-shadow: 3px 3px 7px #333;
+    text-align: right;
+    font-weight: bold;
+}
+
+.bailamtuluan_title {
+    color: #10a3ee;
+    margin-top: 15px;
+}
+
+.motacauhoi {
+    float: left;
+    line-height: 33px;
+    color: #10a3ee;
+}
+
+.cautraloi {
+    color: #10a3ee;
+    font-weight: bold;
+}
+
+.nhanxet {
+    color: red;
+    font-size: 20px;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.diemcontainer {
+    color: #e33131;
+    font-size: 20px;
+    line-height: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.diemcontainer1 {
+    border: 2px solid #00afef;
+    border-radius: 100px;
+    color: red;
+    font-family: Arial;
+    font-size: 55px;
+    height: 140px;
+    line-height: 120px;
+    margin: 0 auto;
+    text-align: center;
+    width: 140px;
+}
+
+.diemcontainer2 {
+    border: 2px solid #00afef;
+    border-radius: 100px;
+    display: block;
+    height: 130px;
+    margin: 3px auto 0;
+    vertical-align: middle;
+    width: 130px;
+}
+
+.t_right {
+    text-align: right;
+}
+
+.logo {}
+
+.cauhoi img,
+.dapan img {
+    max-width: 100%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #8c1515 !important;
+    border-color: #8c1515 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    color: #fff;
+    background-color: #942626 !important;
+    border-color: #942626 !important;
+}
+
+.bg-secondary {
+    color: white;
+    border-color: #E57D04 !important;
+    background-color: #E57D04 !important;
+}
+
+.btn-secondary {
+    color: white;
+    border-color: #E57D04 !important;
+    background-color: #E57D04 !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+    color: #fff;
+    background-color: #e48d2a !important;
+    border-color: #e48d2a !important;
+}
+
+.funkyradio-primary input[type="radio"]:checked~label::before,
+.funkyradio-primary input[type="checkbox"]:checked~label::before {
+    background-color: #E57D04 !important;
+    color: white;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+    .container {
+        width: 96% !important;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 992px) {
+    .logo_textbanner {
+        text-align: center;
+    }
+    .logo_textbanner img {
+        height: auto;
+    }
+    .menuuser {
+        height: 75px;
+    }
+    .usermenu,
+    .baidathi {
+        bottom: -2px;
+    }
+    .text-header {
+        display: block;
+        margin: 0 auto;
+    }
+    .userinfo {
+        bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 820px) {
+    footer {
+        padding-bottom: 30px;
+    }
+    .timer_container {
+        padding: 0.5%;
+        position: fixed;
+        right: 0;
+        bottom: 0px;
+        width: 100%;
+    }
+    .timer {
+        color: white;
+        font-size: 25px !important;
+        height: 30px;
+        line-height: 30px;
+        width: 100%;
+    }
+    .progress {
+        text-indent: 9999px;
+        width: 100%;
+        height: 15px;
+    }
+    .gototop {
+        background-color: lightcyan;
+        border-radius: 3px;
+        cursor: pointer;
+        padding: 4px;
+        display: none;
+    }
+    .gototop img {
+        height: 18px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .text-header {
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 100%;
+        text-align: left;
+        margin-top: 14px;
+    }
+    .text-header img {
+        margin: 7px 0px;
+        max-width: 100%;
+        width: 400px;
+        margin-top: 4px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+    .logo {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+    }
+    .text-header {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        padding: 0;
+    }
+    .text-header img {
+        width: 500px;
+        max-width: 100%;
+    }
+}
