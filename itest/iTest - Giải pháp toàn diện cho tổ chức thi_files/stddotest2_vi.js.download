@@ -1,0 +1,96 @@
+﻿function pauseTest() { document.location.href = "/"; }
+var guiobjects = new Array(
+    new Array("btnSubmitTest", "Nộp bài"),
+    new Array("pdirection2", "Bài thi bao gồm các phần:"),
+    new Array("pdirection", "<b>Khi bạn đã sẵn sàng, hãy bấm vào nút \"Bắt đầu làm bài\" dưới đây.</b><br /><br />"),
+    new Array("btnBatdau", "Bắt đầu làm bài"),
+    new Array("testsubmisionnotice", "Nếu bạn nộp bài thì TOÀN BỘ bài thi kết thúc và không thể quay lại để tiếp tục làm bài. <br/> Bạn có chắc chắn nộp bài không?"),
+    new Array("confirmyes", "Nộp bài"),
+    new Array("confirmno", "Quay lại tiếp tục làm bài"),
+    new Array("answerspanel_title", "Trả lời<br/> của bạn"),
+    new Array("hotnote", "Mất kết nối máy chủ. Bạn cần báo cho cán bộ coi thi để được hỗ trợ kỹ thuật. Việc mất kết nối không ảnh hưởng đến bài làm của bạn nếu được khắc phục trước khi bạn nộp bài hoặc hết thời gian làm bài.<br>Thông báo này sẽ tự biến mất khi có kết nối trở lại. Nếu sau 2 phút vẫn chưa khắc phục được kết nối, bạn hãy kích vào nút bấm sau đây để tạm dừng bài thi, chuyển sang máy khác và tiếp tục làm bài. <center style='margin-bottom:15px;margin-top:15px;'><button class='btn btn-primary' onclick = 'javascript:pauseTest();'>Tạm dừng bài thi</button></center>")
+   
+);
+for (let i = 0; i < guiobjects.length; i++) document.getElementById(guiobjects[i][0]).innerHTML = guiobjects[i][1];
+
+if (h_test_part_id == "") {
+    let pdirection = document.querySelector("#pdirection");
+    pdirection.innerHTML = "<span style='font-weight:bold;color:#ff4500;'>Thời gian làm bài: " + h_time_left  + " phút</span><br><br>" + pdirection.innerHTML;
+}
+
+
+var guiobjectplaceholders = new Array(
+); for (let i = 0; i < guiobjectplaceholders.length; i++) document.getElementById(guiobjectplaceholders[i][0]).placeholder = guiobjectplaceholders[i][1];
+
+var guiobjecttitlesN = new Array(
+    new Array("answerspanel_qlink", "Kích chuột để chuyển đến câu này")
+); for (let i = 0; i < guiobjecttitlesN.length; i++) {
+    let guiobjN = document.getElementsByName(guiobjecttitlesN[i][0]);
+    for (let j = 0; j < guiobjN.length; j++) guiobjN[j].title = guiobjecttitlesN[i][1];
+}
+
+var guiobjectsN = new Array(
+    new Array("questionlabel", "Câu"),
+    new Array("questiongrouplabel", "Câu"),
+    new Array("videoanswerhint", ""),
+    new Array("videoanswerbtn", "Ghi âm"),
+    new Array("fileanswerbtn", "Thêm tệp"),
+    new Array("testpartselectionnotice1", "Bạn đã lựa chọn phần thi"),
+    new Array("testpartselectionnotice2", "Nếu còn do dự, bạn có thể thay đổi lựa chọn của mình bằng cách kích chọn phần thi khác.<br/>Nếu không, hãy bấm nút &lt;Vào ngay&gt; dưới đây để vào làm phần thi đã chọn. "),
+    new Array("testpartselectionnotice3", "trong số các phần thi tự chọn (chọn một trong nhiều)"),
+    new Array("tpsconfirmyes", "Vào ngay"),
+    new Array("tawclabel", "từ")
+); for (let i = 0; i < guiobjectsN.length; i++) {
+    let guiobjN = document.getElementsByName(guiobjectsN[i][0]);
+    for (let j = 0; j < guiobjN.length; j++) guiobjN[j].innerHTML = guiobjectsN[i][1];
+}
+
+let questionlabels = document.querySelectorAll("span.questionlabel");
+for (let i = 0; i < questionlabels.length; i++) {
+    questionlabels[i].style.backgroundColor = "#006700";
+    questionlabels[i].style.color = "#fff";
+}
+
+if (questionlabels.length == 1) questionlabels[0].classList.add("nodisplay");
+
+
+let camAnswers = document.querySelectorAll("button.camera-answer");
+for (let i = 0; i < camAnswers.length; i++) {
+    camAnswers[i].innerHTML = "Chụp và nộp ảnh";
+}
+
+let camAnswersSpan = document.querySelectorAll("span.camera-answer-label");
+for (let i = 0; i < camAnswersSpan.length; i++) {
+    camAnswersSpan[i].innerHTML = "Ảnh";
+}
+
+
+document.querySelector("button#confirmyes").classList.remove("btn-primary");
+document.querySelector("button#confirmyes").classList.add("btn-warning");
+
+
+
+var fontScaleCollection = [
+    document.querySelectorAll("div.rf-container"),
+    document.querySelectorAll("p#pdirection"),
+    document.querySelectorAll("p#pdirection2"),
+    document.querySelectorAll("span.untaken_part"),
+    document.querySelectorAll("span.untaken_part_group"),
+    document.querySelectorAll("button#btnBatdau"),
+    document.querySelectorAll("button.-forward"),
+    document.querySelectorAll("button.-back"),
+    document.querySelectorAll("button.video-ref-forward"),
+    document.querySelectorAll("button.video-ref-back"),
+    document.querySelectorAll("button#btnSubmitTest"),
+    document.querySelectorAll("div.tester-answer-container"),
+    document.querySelectorAll("input#showTime"),
+    document.querySelectorAll("label#testsubmisionnotice"),
+    document.querySelectorAll("button#confirmyes"),
+    document.querySelectorAll("button#confirmno"),
+    document.querySelectorAll("div.unvisited-items"),
+    document.querySelectorAll("div.fullscreen-mask")
+];
+for (let i = 0; i < fontScaleCollection.length; i++)
+    for (let j = 0; j < fontScaleCollection[i].length; j++) fontScaleCollection[i][j].classList.add("font-scale-20");
+
+document.querySelector("#hotnote").classList.add("font-scale-24");
