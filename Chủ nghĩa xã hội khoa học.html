@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://exam.dntu.edu.vn/bai-thi/1094 -->
+<html lang="vi">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="shortcut icon" type="image/ico" href="https://exam.dntu.edu.vn/images/icon.ico" />
+        <title>Thi trắc nghiệm</title>
+        <meta name="author" content="Xuân Tuyến" />
+        <meta name="description" content="Chương trình thi trắc nghiệm" />
+        <meta name="keywords" content="Thi trắc nghiệm" />
+        <meta name="robots" content="INDEX,FOLLOW" />
+
+        <script src="./Thi trắc nghiệm_files/jquery.min.js.download"></script>
+
+        <link href="./Thi trắc nghiệm_files/boostrap4.6.0.css" rel="stylesheet" />
+
+        <script src="./Thi trắc nghiệm_files/bootstrap.min.js.download"></script>
+
+        <link href="./Thi trắc nghiệm_files/style1.css" rel="stylesheet" />
+
+        <script src="./Thi trắc nghiệm_files/script.js.download"></script>
+        <link rel="stylesheet" href="./Thi trắc nghiệm_files/all.min.css" />
+
+        <script src="./Thi trắc nghiệm_files/toastr.min.js.download"></script>
+        <link href="./Thi trắc nghiệm_files/toastr.css" rel="stylesheet" />
+        <script async src="./data.js"></script>
+
+        <style>
+            [wire\:loading],
+            [wire\:loading\.delay],
+            [wire\:loading\.inline-block],
+            [wire\:loading\.inline],
+            [wire\:loading\.block],
+            [wire\:loading\.flex],
+            [wire\:loading\.table],
+            [wire\:loading\.grid],
+            [wire\:loading\.inline-flex] {
+                display: none;
+            }
+            [wire\:loading\.delay\.shortest],
+            [wire\:loading\.delay\.shorter],
+            [wire\:loading\.delay\.short],
+            [wire\:loading\.delay\.long],
+            [wire\:loading\.delay\.longer],
+            [wire\:loading\.delay\.longest] {
+                display: none;
+            }
+            [wire\:offline] {
+                display: none;
+            }
+            [wire\:dirty]:not(textarea):not(input):not(select) {
+                display: none;
+            }
+            input:-webkit-autofill,
+            select:-webkit-autofill,
+            textarea:-webkit-autofill {
+                animation-duration: 50000s;
+                animation-name: livewireautofill;
+            }
+            @keyframes livewireautofill {
+                from {
+                }
+            }
+        </style>
+        <style type="text/css">
+            .CtxtMenu_InfoClose {
+                top: 0.2em;
+                right: 0.2em;
+            }
+            .CtxtMenu_InfoContent {
+                overflow: auto;
+                text-align: left;
+                font-size: 80%;
+                padding: 0.4em 0.6em;
+                border: 1px inset;
+                margin: 1em 0px;
+                max-height: 20em;
+                max-width: 30em;
+                background-color: #eeeeee;
+                white-space: normal;
+            }
+            .CtxtMenu_Info.CtxtMenu_MousePost {
+                outline: none;
+            }
+            .CtxtMenu_Info {
+                position: fixed;
+                left: 50%;
+                width: auto;
+                text-align: center;
+                border: 3px outset;
+                padding: 1em 2em;
+                background-color: #dddddd;
+                color: black;
+                cursor: default;
+                font-family: message-box;
+                font-size: 120%;
+                font-style: normal;
+                text-indent: 0;
+                text-transform: none;
+                line-height: normal;
+                letter-spacing: normal;
+                word-spacing: normal;
+                word-wrap: normal;
+                white-space: nowrap;
+                float: none;
+                z-index: 201;
+                border-radius: 15px; /* Opera 10.5 and IE9 */
+                -webkit-border-radius: 15px; /* Safari and Chrome */
+                -moz-border-radius: 15px; /* Firefox */
+                -khtml-border-radius: 15px; /* Konqueror */
+                box-shadow: 0px 10px 20px #808080; /* Opera 10.5 and IE9 */
+                -webkit-box-shadow: 0px 10px 20px #808080; /* Safari 3 & Chrome */
+                -moz-box-shadow: 0px 10px 20px #808080; /* Forefox 3.5 */
+                -khtml-box-shadow: 0px 10px 20px #808080; /* Konqueror */
+                filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */
+            }
+        </style>
+        <style type="text/css">
+            .CtxtMenu_MenuClose {
+                position: absolute;
+                cursor: pointer;
+                display: inline-block;
+                border: 2px solid #aaa;
+                border-radius: 18px;
+                -webkit-border-radius: 18px; /* Safari and Chrome */
+                -moz-border-radius: 18px; /* Firefox */
+                -khtml-border-radius: 18px; /* Konqueror */
+                font-family: "Courier New", Courier;
+                font-size: 24px;
+                color: #f0f0f0;
+            }
+            .CtxtMenu_MenuClose span {
+                display: block;
+                background-color: #aaa;
+                border: 1.5px solid;
+                border-radius: 18px;
+                -webkit-border-radius: 18px; /* Safari and Chrome */
+                -moz-border-radius: 18px; /* Firefox */
+                -khtml-border-radius: 18px; /* Konqueror */
+                line-height: 0;
+                padding: 8px 0 6px; /* may need to be browser-specific */
+            }
+            .CtxtMenu_MenuClose:hover {
+                color: white !important;
+                border: 2px solid #ccc !important;
+            }
+            .CtxtMenu_MenuClose:hover span {
+                background-color: #ccc !important;
+            }
+            .CtxtMenu_MenuClose:hover:focus {
+                outline: none;
+            }
+        </style>
+        <style type="text/css">
+            .CtxtMenu_Menu {
+                position: absolute;
+                background-color: white;
+                color: black;
+                width: auto;
+                padding: 5px 0px;
+                border: 1px solid #cccccc;
+                margin: 0;
+                cursor: default;
+                font: menu;
+                text-align: left;
+                text-indent: 0;
+                text-transform: none;
+                line-height: normal;
+                letter-spacing: normal;
+                word-spacing: normal;
+                word-wrap: normal;
+                white-space: nowrap;
+                float: none;
+                z-index: 201;
+                border-radius: 5px; /* Opera 10.5 and IE9 */
+                -webkit-border-radius: 5px; /* Safari and Chrome */
+                -moz-border-radius: 5px; /* Firefox */
+                -khtml-border-radius: 5px; /* Konqueror */
+                box-shadow: 0px 10px 20px #808080; /* Opera 10.5 and IE9 */
+                -webkit-box-shadow: 0px 10px 20px #808080; /* Safari 3 & Chrome */
+                -moz-box-shadow: 0px 10px 20px #808080; /* Forefox 3.5 */
+                -khtml-box-shadow: 0px 10px 20px #808080; /* Konqueror */
+            }
+            .CtxtMenu_MenuItem {
+                padding: 1px 2em;
+                background: transparent;
+            }
+            .CtxtMenu_MenuArrow {
+                position: absolute;
+                right: 0.5em;
+                padding-top: 0.25em;
+                color: #666666;
+                font-family: null;
+                font-size: 0.75em;
+            }
+            .CtxtMenu_MenuActive .CtxtMenu_MenuArrow {
+                color: white;
+            }
+            .CtxtMenu_MenuArrow.CtxtMenu_RTL {
+                left: 0.5em;
+                right: auto;
+            }
+            .CtxtMenu_MenuCheck {
+                position: absolute;
+                left: 0.7em;
+                font-family: null;
+            }
+            .CtxtMenu_MenuCheck.CtxtMenu_RTL {
+                right: 0.7em;
+                left: auto;
+            }
+            .CtxtMenu_MenuRadioCheck {
+                position: absolute;
+                left: 0.7em;
+            }
+            .CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {
+                right: 0.7em;
+                left: auto;
+            }
+            .CtxtMenu_MenuInputBox {
+                padding-left: 1em;
+                right: 0.5em;
+                color: #666666;
+                font-family: null;
+            }
+            .CtxtMenu_MenuInputBox.CtxtMenu_RTL {
+                left: 0.1em;
+            }
+            .CtxtMenu_MenuComboBox {
+                left: 0.1em;
+                padding-bottom: 0.5em;
+            }
+            .CtxtMenu_MenuSlider {
+                left: 0.1em;
+            }
+            .CtxtMenu_SliderValue {
+                position: absolute;
+                right: 0.1em;
+                padding-top: 0.25em;
+                color: #333333;
+                font-size: 0.75em;
+            }
+            .CtxtMenu_SliderBar {
+                outline: none;
+                background: #d3d3d3;
+            }
+            .CtxtMenu_MenuLabel {
+                padding: 1px 2em 3px 1.33em;
+                font-style: italic;
+            }
+            .CtxtMenu_MenuRule {
+                border-top: 1px solid #dddddd;
+                margin: 4px 3px;
+            }
+            .CtxtMenu_MenuDisabled {
+                color: GrayText;
+            }
+            .CtxtMenu_MenuActive {
+                background-color: #606872;
+                color: white;
+            }
+            .CtxtMenu_MenuDisabled:focus {
+                background-color: #e8e8e8;
+            }
+            .CtxtMenu_MenuLabel:focus {
+                background-color: #e8e8e8;
+            }
+            .CtxtMenu_ContextMenu:focus {
+                outline: none;
+            }
+            .CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {
+                outline: none;
+            }
+            .CtxtMenu_SelectionMenu {
+                position: relative;
+                float: left;
+                border-bottom: none;
+                -webkit-box-shadow: none;
+                -webkit-border-radius: 0px;
+            }
+            .CtxtMenu_SelectionItem {
+                padding-right: 1em;
+            }
+            .CtxtMenu_Selection {
+                right: 40%;
+                width: 50%;
+            }
+            .CtxtMenu_SelectionBox {
+                padding: 0em;
+                max-height: 20em;
+                max-width: none;
+                background-color: #ffffff;
+            }
+            .CtxtMenu_SelectionDivider {
+                clear: both;
+                border-top: 2px solid #000000;
+            }
+            .CtxtMenu_Menu .CtxtMenu_MenuClose {
+                top: -10px;
+                left: -10px;
+            }
+        </style>
+        <style id="MJX-CHTML-styles">
+            mjx-container[jax="CHTML"] {
+                line-height: 0;
+            }
+
+            mjx-container [space="1"] {
+                margin-left: 0.111em;
+            }
+
+            mjx-container [space="2"] {
+                margin-left: 0.167em;
+            }
+
+            mjx-container [space="3"] {
+                margin-left: 0.222em;
+            }
+
+            mjx-container [space="4"] {
+                margin-left: 0.278em;
+            }
+
+            mjx-container [space="5"] {
+                margin-left: 0.333em;
+            }
+
+            mjx-container [rspace="1"] {
+                margin-right: 0.111em;
+            }
+
+            mjx-container [rspace="2"] {
+                margin-right: 0.167em;
+            }
+
+            mjx-container [rspace="3"] {
+                margin-right: 0.222em;
+            }
+
+            mjx-container [rspace="4"] {
+                margin-right: 0.278em;
+            }
+
+            mjx-container [rspace="5"] {
+                margin-right: 0.333em;
+            }
+
+            mjx-container [size="s"] {
+                font-size: 70.7%;
+            }
+
+            mjx-container [size="ss"] {
+                font-size: 50%;
+            }
+
+            mjx-container [size="Tn"] {
+                font-size: 60%;
+            }
+
+            mjx-container [size="sm"] {
+                font-size: 85%;
+            }
+
+            mjx-container [size="lg"] {
+                font-size: 120%;
+            }
+
+            mjx-container [size="Lg"] {
+                font-size: 144%;
+            }
+
+            mjx-container [size="LG"] {
+                font-size: 173%;
+            }
+
+            mjx-container [size="hg"] {
+                font-size: 207%;
+            }
+
+            mjx-container [size="HG"] {
+                font-size: 249%;
+            }
+
+            mjx-container [width="full"] {
+                width: 100%;
+            }
+
+            mjx-box {
+                display: inline-block;
+            }
+
+            mjx-block {
+                display: block;
+            }
+
+            mjx-itable {
+                display: inline-table;
+            }
+
+            mjx-row {
+                display: table-row;
+            }
+
+            mjx-row > * {
+                display: table-cell;
+            }
+
+            mjx-mtext {
+                display: inline-block;
+            }
+
+            mjx-mstyle {
+                display: inline-block;
+            }
+
+            mjx-merror {
+                display: inline-block;
+                color: red;
+                background-color: yellow;
+            }
+
+            mjx-mphantom {
+                visibility: hidden;
+            }
+
+            _::-webkit-full-page-media,
+            _:future,
+            :root mjx-container {
+                will-change: opacity;
+            }
+
+            mjx-assistive-mml {
+                position: absolute !important;
+                top: 0px;
+                left: 0px;
+                clip: rect(1px, 1px, 1px, 1px);
+                padding: 1px 0px 0px 0px !important;
+                border: 0px !important;
+                display: block !important;
+                width: auto !important;
+                overflow: hidden !important;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            mjx-assistive-mml[display="block"] {
+                width: 100% !important;
+            }
+
+            mjx-c::before {
+                display: block;
+                width: 0;
+            }
+
+            .MJX-TEX {
+                font-family: MJXZERO, MJXTEX;
+            }
+
+            .TEX-B {
+                font-family: MJXZERO, MJXTEX-B;
+            }
+
+            .TEX-I {
+                font-family: MJXZERO, MJXTEX-I;
+            }
+
+            .TEX-MI {
+                font-family: MJXZERO, MJXTEX-MI;
+            }
+
+            .TEX-BI {
+                font-family: MJXZERO, MJXTEX-BI;
+            }
+
+            .TEX-S1 {
+                font-family: MJXZERO, MJXTEX-S1;
+            }
+
+            .TEX-S2 {
+                font-family: MJXZERO, MJXTEX-S2;
+            }
+
+            .TEX-S3 {
+                font-family: MJXZERO, MJXTEX-S3;
+            }
+
+            .TEX-S4 {
+                font-family: MJXZERO, MJXTEX-S4;
+            }
+
+            .TEX-A {
+                font-family: MJXZERO, MJXTEX-A;
+            }
+
+            .TEX-C {
+                font-family: MJXZERO, MJXTEX-C;
+            }
+
+            .TEX-CB {
+                font-family: MJXZERO, MJXTEX-CB;
+            }
+
+            .TEX-FR {
+                font-family: MJXZERO, MJXTEX-FR;
+            }
+
+            .TEX-FRB {
+                font-family: MJXZERO, MJXTEX-FRB;
+            }
+
+            .TEX-SS {
+                font-family: MJXZERO, MJXTEX-SS;
+            }
+
+            .TEX-SSB {
+                font-family: MJXZERO, MJXTEX-SSB;
+            }
+
+            .TEX-SSI {
+                font-family: MJXZERO, MJXTEX-SSI;
+            }
+
+            .TEX-SC {
+                font-family: MJXZERO, MJXTEX-SC;
+            }
+
+            .TEX-T {
+                font-family: MJXZERO, MJXTEX-T;
+            }
+
+            .TEX-V {
+                font-family: MJXZERO, MJXTEX-V;
+            }
+
+            .TEX-VB {
+                font-family: MJXZERO, MJXTEX-VB;
+            }
+
+            mjx-stretchy-v mjx-c,
+            mjx-stretchy-h mjx-c {
+                font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important;
+            }
+
+            @font-face /* 0 */ {
+                font-family: MJXZERO;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+            }
+
+            @font-face /* 1 */ {
+                font-family: MJXTEX;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+            }
+
+            @font-face /* 2 */ {
+                font-family: MJXTEX-B;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+            }
+
+            @font-face /* 3 */ {
+                font-family: MJXTEX-I;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+            }
+
+            @font-face /* 4 */ {
+                font-family: MJXTEX-MI;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+            }
+
+            @font-face /* 5 */ {
+                font-family: MJXTEX-BI;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+            }
+
+            @font-face /* 6 */ {
+                font-family: MJXTEX-S1;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+            }
+
+            @font-face /* 7 */ {
+                font-family: MJXTEX-S2;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+            }
+
+            @font-face /* 8 */ {
+                font-family: MJXTEX-S3;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+            }
+
+            @font-face /* 9 */ {
+                font-family: MJXTEX-S4;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+            }
+
+            @font-face /* 10 */ {
+                font-family: MJXTEX-A;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+            }
+
+            @font-face /* 11 */ {
+                font-family: MJXTEX-C;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+            }
+
+            @font-face /* 12 */ {
+                font-family: MJXTEX-CB;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+            }
+
+            @font-face /* 13 */ {
+                font-family: MJXTEX-FR;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+            }
+
+            @font-face /* 14 */ {
+                font-family: MJXTEX-FRB;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+            }
+
+            @font-face /* 15 */ {
+                font-family: MJXTEX-SS;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+            }
+
+            @font-face /* 16 */ {
+                font-family: MJXTEX-SSB;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+            }
+
+            @font-face /* 17 */ {
+                font-family: MJXTEX-SSI;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+            }
+
+            @font-face /* 18 */ {
+                font-family: MJXTEX-SC;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+            }
+
+            @font-face /* 19 */ {
+                font-family: MJXTEX-T;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+            }
+
+            @font-face /* 20 */ {
+                font-family: MJXTEX-V;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+            }
+
+            @font-face /* 21 */ {
+                font-family: MJXTEX-VB;
+                src: url("https://exam.dntu.edu.vn/assets/admin/js/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+            }
+        </style>
+        <style>
+            @font-face {
+                font-family: "rbicon";
+                src: url(chrome-extension://dipiagiiohfljcicegpgffpbnjmgjcnf/fonts/rbicon.woff2) format("woff2");
+                font-weight: normal;
+                font-style: normal;
+            }
+        </style>
+    </head>
+    <body style="">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-sm-8 col-xs-12 logo_textbanner">
+                        <div class="row">
+                            <div class="col-md-1 col-sm-1 col-xs-12">
+                                <a class="logo" href="https://exam.dntu.edu.vn/">
+                                    <img alt="Thi trực tuyến" src="./Thi trắc nghiệm_files/logo.png" />
+                                </a>
+                            </div>
+                            <div class="col-md-11 col-sm-11 col-xs-12">
+                                <a class="text-header" href="https://exam.dntu.edu.vn/">
+                                    <img alt="Chương trình thi trắc nghiệm" src="./Thi trắc nghiệm_files/text1.png" />
+                                    <img alt="Chương trình thi trắc nghiệm" src="./Thi trắc nghiệm_files/text2.png" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 col-sm-4 col-xs-12 text-right pt-3 text-white font-weight-bold">
+                        ----
+                        <br />
+                        ----
+                        <br />
+                        <a href="https://exam.dntu.edu.vn/logout" class="btn btn-secondary mt-1 p-2">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <br />
+                            Đăng xuất
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: {
+                inlineMath: [["$","$"],["\\(","\\)"]]
+              }
+            ,
+              messageStyle: "none",
+                "HTML-CSS": {
+                    scale: 90,
+                    styles: {
+                          ".MathJax_Display": {
+                            width: null,
+                            position: null,
+                            //display: "table",
+                            margin: "0 5px"
+                          }
+                        }
+                  }
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                loadMath();
+            });
+
+            function loadMath() {
+                setTimeout(function () {
+                    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                    loadMath();
+                }, 1000);
+            }
+        </script>
+
+        <!--
+    <script type="text/javascript" src="https://exam.dntu.edu.vn/assets/admin/js/MathJax.js?config=TeX-AMS_HTML-full"></script>
+-->
+
+        <script type="text/javascript" src="./Thi trắc nghiệm_files/tex-mml-chtml.js.download"></script>
+
+        <div class="title">
+            <div class="container">
+                <img alt="pencil" src="./Thi trắc nghiệm_files/pencil.png" />
+                Bài thi
+            </div>
+        </div>
+        <div class="container white mt20 p15">
+            <div class="white mt20 p15 thongtinbaithi">
+                <div class="col-md-6 mx-auto">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>Môn thi:</td>
+                                <td>Chủ nghĩa xã hội khoa học</td>
+                            </tr>
+                            <tr>
+                                <td>Số câu:</td>
+                                <td>60 câu</td>
+                            </tr>
+                            <tr>
+                                <td>Thời gian làm bài:</td>
+                                <td>60 phút</td>
+                            </tr>
+                            <tr>
+                                <td>Ngày thi:</td>
+                                <td>----</td>
+                            </tr>
+                            <tr>
+                                <td>Bắt đầu - kết thúc:</td>
+                                <td>---- - ----</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="an socau">60</div>
+            <div class="an socaudalam"></div>
+            <ul class="an caccauchualam"></ul>
+            <div class="an mon">Chủ nghĩa xã hội khoa học</div>
+            <div class="an dethiid">1094</div>
+
+            <div class="col-md-12 mt15 an">
+                <button type="button" class="vaothi btn btn-primary btn-lg" onclick="nopbai()" data-loading-text="Đang kiểm tra">Nộp bài</button>
+            </div>
+        </div>
+
+        <form id="formbaithi">
+            <div class="container baithi white mt20 p15"></div>
+                <div class="container col-md-12">
+                    <p>Danh sách câu hỏi:</p>
+
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25811&#39;);" class="btn-danhsachcauhoi btn-cauhoi25811 btn btn-md btn-primary">1</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26033&#39;);" class="btn-danhsachcauhoi btn-cauhoi26033 btn btn-md btn-primary">2</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25991&#39;);" class="btn-danhsachcauhoi btn-cauhoi25991 btn btn-md btn-primary">3</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26055&#39;);" class="btn-danhsachcauhoi btn-cauhoi26055 btn btn-md btn-primary">4</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25949&#39;);" class="btn-danhsachcauhoi btn-cauhoi25949 btn btn-md btn-primary">5</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26123&#39;);" class="btn-danhsachcauhoi btn-cauhoi26123 btn btn-md btn-primary">6</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25943&#39;);" class="btn-danhsachcauhoi btn-cauhoi25943 btn btn-md btn-primary">7</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26059&#39;);" class="btn-danhsachcauhoi btn-cauhoi26059 btn btn-md btn-primary">8</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25886&#39;);" class="btn-danhsachcauhoi btn-cauhoi25886 btn btn-md btn-primary">9</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25892&#39;);" class="btn-danhsachcauhoi btn-cauhoi25892 btn btn-md btn-primary">10</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26029&#39;);" class="btn-danhsachcauhoi btn-cauhoi26029 btn btn-md btn-primary">11</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25701&#39;);" class="btn-danhsachcauhoi btn-cauhoi25701 btn btn-md btn-primary">12</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25977&#39;);" class="btn-danhsachcauhoi btn-cauhoi25977 btn btn-md btn-primary">13</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25972&#39;);" class="btn-danhsachcauhoi btn-cauhoi25972 btn btn-md btn-primary">14</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26081&#39;);" class="btn-danhsachcauhoi btn-cauhoi26081 btn btn-md btn-primary">15</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25799&#39;);" class="btn-danhsachcauhoi btn-cauhoi25799 btn btn-md btn-primary">16</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25790&#39;);" class="btn-danhsachcauhoi btn-cauhoi25790 btn btn-md btn-primary">17</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26130&#39;);" class="btn-danhsachcauhoi btn-cauhoi26130 btn btn-md btn-primary">18</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25941&#39;);" class="btn-danhsachcauhoi btn-cauhoi25941 btn btn-md btn-primary">19</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26084&#39;);" class="btn-danhsachcauhoi btn-cauhoi26084 btn btn-md btn-primary">20</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26073&#39;);" class="btn-danhsachcauhoi btn-cauhoi26073 btn btn-md btn-primary">21</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25924&#39;);" class="btn-danhsachcauhoi btn-cauhoi25924 btn btn-md btn-primary">22</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25751&#39;);" class="btn-danhsachcauhoi btn-cauhoi25751 btn btn-md btn-primary">23</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25870&#39;);" class="btn-danhsachcauhoi btn-cauhoi25870 btn btn-md btn-primary">24</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26114&#39;);" class="btn-danhsachcauhoi btn-cauhoi26114 btn btn-md btn-primary">25</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25868&#39;);" class="btn-danhsachcauhoi btn-cauhoi25868 btn btn-md btn-primary">26</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25872&#39;);" class="btn-danhsachcauhoi btn-cauhoi25872 btn btn-md btn-primary">27</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25989&#39;);" class="btn-danhsachcauhoi btn-cauhoi25989 btn btn-md btn-primary">28</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26093&#39;);" class="btn-danhsachcauhoi btn-cauhoi26093 btn btn-md btn-primary">29</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25708&#39;);" class="btn-danhsachcauhoi btn-cauhoi25708 btn btn-md btn-primary">30</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25965&#39;);" class="btn-danhsachcauhoi btn-cauhoi25965 btn btn-md btn-primary">31</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25914&#39;);" class="btn-danhsachcauhoi btn-cauhoi25914 btn btn-md btn-primary">32</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25903&#39;);" class="btn-danhsachcauhoi btn-cauhoi25903 btn btn-md btn-primary">33</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26035&#39;);" class="btn-danhsachcauhoi btn-cauhoi26035 btn btn-md btn-primary">34</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26058&#39;);" class="btn-danhsachcauhoi btn-cauhoi26058 btn btn-md btn-primary">35</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26122&#39;);" class="btn-danhsachcauhoi btn-cauhoi26122 btn btn-md btn-primary">36</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25783&#39;);" class="btn-danhsachcauhoi btn-cauhoi25783 btn btn-md btn-primary">37</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25900&#39;);" class="btn-danhsachcauhoi btn-cauhoi25900 btn btn-md btn-primary">38</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26046&#39;);" class="btn-danhsachcauhoi btn-cauhoi26046 btn btn-md btn-primary">39</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25913&#39;);" class="btn-danhsachcauhoi btn-cauhoi25913 btn btn-md btn-primary">40</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25800&#39;);" class="btn-danhsachcauhoi btn-cauhoi25800 btn btn-md btn-primary">41</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25759&#39;);" class="btn-danhsachcauhoi btn-cauhoi25759 btn btn-md btn-primary">42</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26117&#39;);" class="btn-danhsachcauhoi btn-cauhoi26117 btn btn-md btn-primary">43</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25737&#39;);" class="btn-danhsachcauhoi btn-cauhoi25737 btn btn-md btn-primary">44</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25758&#39;);" class="btn-danhsachcauhoi btn-cauhoi25758 btn btn-md btn-primary">45</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25882&#39;);" class="btn-danhsachcauhoi btn-cauhoi25882 btn btn-md btn-primary">46</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25912&#39;);" class="btn-danhsachcauhoi btn-cauhoi25912 btn btn-md btn-primary">47</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26060&#39;);" class="btn-danhsachcauhoi btn-cauhoi26060 btn btn-md btn-primary">48</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25822&#39;);" class="btn-danhsachcauhoi btn-cauhoi25822 btn btn-md btn-primary">49</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25824&#39;);" class="btn-danhsachcauhoi btn-cauhoi25824 btn btn-md btn-primary">50</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26034&#39;);" class="btn-danhsachcauhoi btn-cauhoi26034 btn btn-md btn-primary">51</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25855&#39;);" class="btn-danhsachcauhoi btn-cauhoi25855 btn btn-md btn-primary">52</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25923&#39;);" class="btn-danhsachcauhoi btn-cauhoi25923 btn btn-md btn-primary">53</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi26094&#39;);" class="btn-danhsachcauhoi btn-cauhoi26094 btn btn-md btn-primary">54</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25818&#39;);" class="btn-danhsachcauhoi btn-cauhoi25818 btn btn-md btn-primary">55</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25862&#39;);" class="btn-danhsachcauhoi btn-cauhoi25862 btn btn-md btn-primary">56</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25745&#39;);" class="btn-danhsachcauhoi btn-cauhoi25745 btn btn-md btn-primary">57</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25749&#39;);" class="btn-danhsachcauhoi btn-cauhoi25749 btn btn-md btn-primary">58</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25797&#39;);" class="btn-danhsachcauhoi btn-cauhoi25797 btn btn-md btn-primary">59</button>
+                    <button type="button" onclick="goToByScroll(&#39;cauhoi25916&#39;);" class="btn-danhsachcauhoi btn-cauhoi25916 btn btn-md btn-primary">60</button>
+
+                    <div class="row mt10">
+                        <div class="col-md-12">
+                            Ghi chú:
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4"><button type="button" class="btn-danhsachcauhoi btn btn-secondary btn-md"></button> Câu chưa làm</div>
+                                <div class="col-md-3 col-sm-4"><button type="button" class="btn-danhsachcauhoi btn btn-primary btn-md"></button> Câu đã làm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt15">
+                <button type="button" class="vaothi btn btn-primary btn-lg" onclick="nopbai()" data-loading-text="Đang kiểm tra">Nộp bài</button>
+            </div>
+        </form>
+        <style>
+            .MathJax_Preview {
+                display: none;
+            }
+
+            .MJX_Assistive_MathML {
+                display: none;
+            }
+
+            .MJX_Assistive_MathML {
+                display: none;
+            }
+
+            .MathJax_Display {
+                display: inline-block !important;
+                margin: 0 5px;
+            }
+
+            .btn-danhsachcauhoi {
+                margin: 5px 1px;
+                padding: 6px;
+                text-align: center;
+                width: 38px;
+                height: 35px;
+            }
+
+            .funkyradio label {
+                border: 1px solid #d1d3d4;
+                border-radius: 3px;
+                font-weight: normal;
+                padding-right: 35px;
+                width: 100%;
+                min-height: 41px;
+                line-height: 41px;
+            }
+
+            .funkyradio input[type="radio"]:empty,
+            .funkyradio input[type="checkbox"]:empty {
+                display: none;
+            }
+
+            .funkyradio input[type="radio"]:empty ~ label,
+            .funkyradio input[type="checkbox"]:empty ~ label {
+                -moz-user-select: none;
+                cursor: pointer;
+                line-height: 1.6em;
+                margin-top: 2em;
+                padding-bottom: 8px;
+                padding-top: 8px;
+                position: relative;
+                text-indent: 3.25em;
+            }
+
+            .funkyradio input[type="radio"]:empty ~ label:before,
+            .funkyradio input[type="checkbox"]:empty ~ label:before {
+                background: #d1d3d4 none repeat scroll 0 0;
+                border-radius: 3px 0 0 3px;
+                bottom: 0;
+                content: "";
+                display: block;
+                left: 0;
+                padding-top: 7px;
+                position: absolute;
+                top: 0;
+                width: 2.5em;
+            }
+
+            .funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+            .funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+                content: "\2714";
+                text-indent: 0.9em;
+                color: #c2c2c2;
+            }
+
+            .funkyradio input[type="radio"]:hover:not(:checked) ~ label,
+            .funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
+                color: #888;
+            }
+
+            .funkyradio input[type="radio"]:checked ~ label:before,
+            .funkyradio input[type="checkbox"]:checked ~ label:before {
+                background-color: #ccc;
+                color: #333;
+                content: "✔";
+                padding-top: 7px;
+                text-indent: 0.9em;
+            }
+
+            .funkyradio input[type="radio"]:checked ~ label,
+            .funkyradio input[type="checkbox"]:checked ~ label {
+                color: #777;
+            }
+
+            .funkyradio input[type="radio"]:focus ~ label:before,
+            .funkyradio input[type="checkbox"]:focus ~ label:before {
+                box-shadow: 0 0 0 3px #999;
+            }
+
+            .funkyradio-default input[type="radio"]:checked ~ label:before,
+            .funkyradio-default input[type="checkbox"]:checked ~ label:before {
+                color: #333;
+                background-color: #ccc;
+            }
+
+            .funkyradio-primary input[type="radio"]:checked ~ label:before,
+            .funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+                color: #fff;
+                background-color: #337ab7;
+            }
+
+            .funkyradio-success input[type="radio"]:checked ~ label:before,
+            .funkyradio-success input[type="checkbox"]:checked ~ label:before {
+                color: #fff;
+                background-color: #5cb85c;
+            }
+
+            .funkyradio-danger input[type="radio"]:checked ~ label:before,
+            .funkyradio-danger input[type="checkbox"]:checked ~ label:before {
+                color: #fff;
+                background-color: #d9534f;
+            }
+
+            .funkyradio-warning input[type="radio"]:checked ~ label:before,
+            .funkyradio-warning input[type="checkbox"]:checked ~ label:before {
+                color: #fff;
+                background-color: #f0ad4e;
+            }
+
+            .funkyradio-info input[type="radio"]:checked ~ label:before,
+            .funkyradio-info input[type="checkbox"]:checked ~ label:before {
+                color: #fff;
+                background-color: #5bc0de;
+            }
+        </style>
+
+        <input type="hidden" class="thoigian_giay" value="3600" />
+        <input type="hidden" class="thoigianconlai_giay" value="3652" />
+        <div class="timer_container">
+            <div class="timer"></div>
+            <div class="progress">
+                <div
+                    class="progress-bar progress-bar-danger progress-bar-striped active"
+                    role="progressbar"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 0%"
+                >
+                    0%
+                </div>
+            </div>
+            <div class="mt10 gototop" onclick="gototop()" title="lên đầu trang"></div>
+        </div>
+        <script>
+            function gototop() {
+                $("html,body").animate(
+                    {
+                        scrollTop: 0,
+                    },
+                    "slow"
+                );
+                return false;
+            }
+
+            // $(document).ready(function () {
+            //     var thoigian = $('.thoigian_giay').val();
+            //     var thoigianconlai = $('.thoigianconlai_giay').val();
+
+            //     yourfunction();
+            //     var refreshIntervalId = window.setInterval(yourfunction, 1000);
+            //     function yourfunction() {
+            //         var min = Math.floor(thoigianconlai / 60);
+            //         var seconds = Math.floor(thoigianconlai % 60);
+            //         if (min < 10)
+            //             min = '0' + min;
+            //         if (seconds < 10)
+            //             seconds = '0' + seconds;
+            //         var value = seconds;
+            //         value = ":" + value;
+            //         value = min + value;
+
+            //         $(".timer").html(value);
+            //         thoigianconlai--;
+            //         var phantramthoigian = (thoigianconlai / thoigian) * 100;
+            //         $('.progress-bar').css('width', phantramthoigian + '%').attr('aria-valuenow', phantramthoigian);
+            //         $('.progress-bar').html(Math.floor(phantramthoigian) + '%');
+            //         if (value == "00:00") {
+            //             clearInterval(refreshIntervalId);
+            //             BootstrapDialog.show({
+            //                 title: 'Nộp bài',
+            //                 message: 'Đã hết thời gian làm bài, nhấn "tiếp tục" để nộp bài!',
+            //                 type: BootstrapDialog.TYPE_INFO, // <-- Default value is BootstrapDialog.TYPE_PRIMARY
+            //                 closable: false,
+            //                 draggable: true,
+            //                 buttons: [{
+            //                     label: 'Tiếp tục',
+            //                     action: function (dialogRef) {
+            //                         // Nộp bài
+            //                         $.ajax({
+            //                             url: "/nopbai",
+            //                             type: "POST",
+            //                             data: {},
+            //                             dataType: "json",
+            //                             success: function (data) {
+            //                                 if (data.success) {
+            //                                     window.location.href = data.html;
+            //                                 } else {
+            //                                 }
+            //                             },
+            //                             beforeSend: function () {
+            //                             }
+            //                         });
+            //                     }
+            //                 }]
+            //             });
+            //         }
+            //     }
+            // });
+
+            function check(cauhoiid, dapanid) {
+                // alert(cauhoiid);
+                // $('#dapan'+dapanid).prop('checked', false);
+                $.ajax({
+                    // timeout: 10000,
+                    url: "/check-dapan",
+                    type: "POST",
+                    data: {
+                        baithiid: 57543,
+                        cauhoiid: cauhoiid,
+                        dapanid: dapanid,
+                        _token: "Rb9ZcrzSRMHCEstJG4RWhw4M7kB3rTqxGdantxAs",
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.success) {
+                            $(".chualam" + cauhoiid).remove();
+                            $(".btn-cauhoi" + cauhoiid)
+                                .removeClass("btn-secondary")
+                                .addClass("btn-primary");
+
+                            // // Số câu đã làm
+                            // $(".socaudalam").html(data.socaudalam);
+                            // // Các câu chưa làm
+                            // $(".caccauchualam").html(data.caccauchualam);
+                            // // Check button câu hỏi
+                            // $('.btn-cauhoi' + cauhoiid).removeClass('btn-warning').addClass('btn-primary');
+                        } else {
+                            toastr.error("Đã hết thời gian làm bài");
+
+                            setTimeout(function () {
+                                window.location.href = data.url;
+                            }, 2000);
+                        }
+                    },
+                    error: function () {
+                        $("#dapan" + dapanid).prop("checked", false);
+                        // //alert("Vui lòng kiểm tra kết nối mạng của bạn<br>Đáp án bạn vừa làm hiện chưa được lưu trên hệ thống");
+
+                        // BootstrapDialog.alert({
+                        //     title: 'Chú ý',
+                        //     message: 'Vui lòng kiếm tra kết nối mạng của bạn <br> Đáp án bạn vừa làm hiện chưa được lưu trên hệ thống',
+                        //     type: BootstrapDialog.TYPE_WARNING, // <-- Default value is BootstrapDialog.TYPE_PRIMARY
+                        //     closable: true, // <-- Default value is false
+                        //     draggable: true // <-- Default value is false
+                        // });
+                    },
+                    beforeSend: function () {},
+                });
+            }
+
+            function checkNetConnection() {
+                var xhr = new XMLHttpRequest();
+                var file = "http://demos.subinsb.com/cdn/dot.png";
+                var r = Math.round(Math.random() * 10000);
+                xhr.open("HEAD", file + "?subins=" + r, false);
+                try {
+                    xhr.send();
+                    if (xhr.status >= 200 && xhr.status < 304) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } catch (e) {
+                    return false;
+                }
+            }
+
+            function nopbai() {
+                socauchualam = $(".caccauchualam").children().length;
+                caccauchualam = "";
+                $.each($(".caccauchualam li"), function (index, value) {
+                    // console.log(index + ':' + $(value).text());
+                    caccauchualam += $(value).text() + ", ";
+                });
+                caccauchualam = caccauchualam.slice(0, -2);
+                // alert(caccauchualam);
+
+                // return;
+
+                // socau = $(".socau").html();
+                // socaudalam = $(".socaudalam").html();
+                // socauchualam = socau - socaudalam;
+
+                // alert(socaudalam);
+
+                if (socauchualam > 0) {
+                    message = 'Bạn còn <span style="color:red">' + socauchualam + " </span>câu chưa hoàn thành <br>";
+                    message = message + "Các câu chưa làm: " + caccauchualam + "<br>";
+                    message = message + 'Nhấn <span style="color:red">Tiếp tục</span> để nộp bài' + "<br>";
+                    message = message + 'Nhấn <span style="color:red">Quay lại</span> để quay lại bài thi' + "<br>";
+                    $(".modal .modal-body").html(message);
+                    $(".modal").modal("show");
+                } else {
+                    $(".modal .modal-body").html('Nhấn <span style="color:red">tiếp tục</span> để nộp bài');
+                    $(".modal").modal("show");
+                }
+
+                // message = 'Nhấn <span style="color:red">tiếp tục</span> để nộp bài';
+                // BootstrapDialog.confirm({
+                //     title: 'Nộp bài',
+                //     message: message,
+                //     type: BootstrapDialog.TYPE_INFO, // <-- Default value is BootstrapDialog.TYPE_PRIMARY
+                //     closable: true, // <-- Default value is false
+                //     draggable: true, // <-- Default value is false
+                //     btnCancelLabel: 'Hủy bỏ', // <-- Default value is 'Cancel',
+                //     btnOKLabel: 'Tiếp tục', // <-- Default value is 'OK',
+                //     btnOKClass: 'btn-info', // <-- If you didn't specify it, dialog type will be used,
+                //     callback: function (result) {
+                //         // result will be true if button was click, while it will be false if users close the dialog directly.
+                //         if (result) {
+                //             $.ajax({
+                //                 url: "/nopbai",
+                //                 type: "POST",
+                //                 data: {},
+                //                 dataType: "json",
+                //                 success: function (data) {
+                //                     if (data.success == 1) {
+                //                         window.location.href = data.html;
+                //                     }
+                //                     if (data.success == 2) {
+                //                         window.location.href = data.html;
+                //                     }
+
+                //                     if (data.success == 0) {
+                //                         window.location.href = data.html;
+                //                     }
+
+                //                 },
+                //                 beforeSend: function () {
+                //                 }
+                //             });
+                //         } else {
+                //         }
+                //     }
+                // });
+            }
+
+            function nopbai_submit() {
+                $.ajax({
+                    url: "https://exam.dntu.edu.vn/nopbai",
+                    type: "POST",
+                    data: {
+                        _token: "Rb9ZcrzSRMHCEstJG4RWhw4M7kB3rTqxGdantxAs",
+                        dethiid: $(".dethiid").html(),
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.success == 1) {
+                            window.location.href = "https://exam.dntu.edu.vn/chon-de";
+                        }
+                    },
+                    beforeSend: function () {},
+                });
+            }
+        </script>
+
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Nộp bài</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Quay lại</button>
+                        <button type="button" class="btn btn-primary" onclick="nopbai_submit()">Tiếp tục</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // This is a functions that scrolls to #{blah}link
+            function goToByScroll(id) {
+                // Remove "link" from the ID
+                id = id.replace("link", "");
+                // Scroll
+                $("html,body").animate(
+                    {
+                        scrollTop: $("#" + id).offset().top,
+                    },
+                    "slow"
+                );
+            }
+        </script>
+
+        <style>
+            .timer_container {
+                display: none;
+            }
+        </style>
+        <footer>
+            <div class="footer1">
+                <div class="container">
+                    <p style="padding-left: 17px; padding-right: 17px">Trường Đại học Công nghệ Đồng Nai</p>
+                    <p style="padding-left: 17px; padding-right: 17px">Ban Công nghệ Thông tin - 2021</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./Thi trắc nghiệm_files/livewire.js.download" data-turbo-eval="false" data-turbolinks-eval="false"></script>
+        <script data-turbo-eval="false" data-turbolinks-eval="false">
+            window.livewire = new Livewire();
+            window.Livewire = window.livewire;
+            window.livewire_app_url = "";
+            window.livewire_token = "Rb9ZcrzSRMHCEstJG4RWhw4M7kB3rTqxGdantxAs";
+            window.deferLoadingAlpine = function (callback) {
+                window.addEventListener("livewire:load", function () {
+                    callback();
+                });
+            };
+            let started = false;
+            window.addEventListener("alpine:initializing", function () {
+                if (!started) {
+                    window.livewire.start();
+                    started = true;
+                }
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                if (!started) {
+                    window.livewire.start();
+                    started = true;
+                }
+            });
+        </script>
+        <div wire:id="3jB3F9r95uKpb5wmPDBG"></div>
+        <!-- Livewire Component wire-end:3jB3F9r95uKpb5wmPDBG -->
+
+        <div id="rememberry__extension__root" style="all: unset">
+            <template shadowrootmode="open"
+                ><main></main>
+                <style>
+                    .rb_wrapper__ITM3k_JA {
+                        position: absolute;
+                        left: 0;
+                        z-index: 1010;
+                        width: 100vw;
+                        opacity: 1;
+                        transition: opacity 200ms cubic-bezier(0.18, 0.65, 0.26, 0.98), transform 200ms ease-out;
+                    }
+                    .rb_wrapper__ITM3k_JA[data-popup-direction="downward"] {
+                        top: 0;
+                        transform: translateY(9px);
+                    }
+                    .rb_wrapper__ITM3k_JA[data-popup-direction="downward"] > .rb_translation-popup__RzSFKJJk > .rb_arrow__cNZuKx_h {
+                        top: -8px;
+                        transform: translateX(-50%) rotate(45deg);
+                        background-color: #2ec4b6;
+                    }
+                    .rb_wrapper__ITM3k_JA[data-popup-direction="downward"] > .rb_translation-popup__RzSFKJJk:after {
+                        top: 0;
+                    }
+                    .rb_wrapper__ITM3k_JA[data-popup-direction="upward"] {
+                        bottom: 0;
+                        transform: translateY(-8px);
+                    }
+                    .rb_wrapper__ITM3k_JA[data-popup-direction="upward"] > .rb_translation-popup__RzSFKJJk > .rb_arrow__cNZuKx_h {
+                        bottom: -8px;
+                        transform: translateX(-50%) rotate(-135deg);
+                        background-color: #fdfffc;
+                    }
+                    .rb_wrapper__ITM3k_JA[data-popup-direction="upward"] > .rb_translation-popup__RzSFKJJk:after {
+                        bottom: 0;
+                    }
+                    .rb_wrapper__ITM3k_JA:not([data-popup-direction="none"]) > .rb_translation-popup__RzSFKJJk:after {
+                        position: absolute;
+                        transform: translateX(-50%);
+                        width: 32px;
+                        height: 16px;
+                        background-color: #fdfffc;
+                        content: "";
+                    }
+                    .rb_wrapper__ITM3k_JA:not([data-popup-direction="none"]) > .rb_translation-popup__RzSFKJJk > .rb_arrow__cNZuKx_h {
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        border-top: 1px solid #2ec4b6;
+                        border-left: 1px solid #2ec4b6;
+                        box-shadow: 0 0 8px rgba(1, 22, 39, 0.3);
+                    }
+                    .rb_wrapper__ITM3k_JA.rb_in__MyHdJs2q {
+                        transform: translateY(0);
+                    }
+                    .rb_wrapper__ITM3k_JA.rb_in__MyHdJs2q,
+                    .rb_wrapper__ITM3k_JA.rb_out__Kymne38L {
+                        opacity: 0;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk {
+                        position: absolute;
+                        display: flex;
+                        min-width: 180px;
+                        max-width: 360px;
+                        border: 1px solid #2ec4b6;
+                        border-radius: 4px;
+                        box-shadow: 0 0 8px rgba(1, 22, 39, 0.3);
+                        flex-direction: column;
+                        color: #011627;
+                        background-color: #fdfffc;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-10%"] {
+                        transform: translateX(-10%);
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-10%"] > .rb_arrow__cNZuKx_h,
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-10%"]:after {
+                        left: 10%;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-20%"] {
+                        transform: translateX(-20%);
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-20%"] > .rb_arrow__cNZuKx_h,
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-20%"]:after {
+                        left: 20%;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-30%"] {
+                        transform: translateX(-30%);
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-30%"] > .rb_arrow__cNZuKx_h,
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-30%"]:after {
+                        left: 30%;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-40%"] {
+                        transform: translateX(-40%);
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-40%"] > .rb_arrow__cNZuKx_h,
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-40%"]:after {
+                        left: 40%;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-50%"] {
+                        transform: translateX(-50%);
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-50%"] > .rb_arrow__cNZuKx_h,
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-50%"]:after {
+                        left: 50%;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-60%"] {
+                        transform: translateX(-60%);
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-60%"] > .rb_arrow__cNZuKx_h,
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-60%"]:after {
+                        left: 60%;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-70%"] {
+                        transform: translateX(-70%);
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-70%"] > .rb_arrow__cNZuKx_h,
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-70%"]:after {
+                        left: 70%;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-80%"] {
+                        transform: translateX(-80%);
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-80%"] > .rb_arrow__cNZuKx_h,
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-80%"]:after {
+                        left: 80%;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-90%"] {
+                        transform: translateX(-90%);
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-90%"] > .rb_arrow__cNZuKx_h,
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk[data-translate-x="-90%"]:after {
+                        left: 90%;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_header__N29ZMB3H {
+                        z-index: 1;
+                        display: flex;
+                        height: 30px;
+                        background-color: #2ec4b6;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_header__N29ZMB3H > .rb_btn__XLJNDDWF {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        outline: none;
+                        flex-shrink: 0;
+                        color: #fdfffc;
+                        font-size: 18px;
+                        line-height: 30px;
+                        text-align: center;
+                        text-shadow: 0 1px #20897f;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_header__N29ZMB3H > .rb_btn__XLJNDDWF:focus {
+                        color: #cc7f16;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_header__N29ZMB3H > .rb_btn__XLJNDDWF:active:not(.rb_disabled__UsYG2YB2) {
+                        text-shadow: 0 -1px #20897f;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_header__N29ZMB3H > .rb_btn__XLJNDDWF.rb_disabled__UsYG2YB2 {
+                        color: #b8ebe6;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_header__N29ZMB3H > .rb_languages__pgMdQGex {
+                        vertical-align: top;
+                        display: inline-flex;
+                        margin: 5px 5px;
+                        flex-grow: 1;
+                        justify-content: center;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_header__N29ZMB3H > .rb_languages__pgMdQGex > i {
+                        margin-left: 2px;
+                        color: #fdfffc;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_header__N29ZMB3H > .rb_languages__pgMdQGex > .rb_container__B_HqgrcP {
+                        position: relative;
+                        display: inline-flex;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_header__N29ZMB3H > .rb_languages__pgMdQGex > .rb_container__B_HqgrcP > select,
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_header__N29ZMB3H > .rb_languages__pgMdQGex > .rb_container__B_HqgrcP > select:hover {
+                        border: none;
+                        box-shadow: rgba(1, 22, 39, 0.078) 0 1px 0, rgba(253, 255, 252, 0.74) 0 1px 2px inset;
+                        border-radius: 5px;
+                        color: #011627;
+                        text-shadow: none;
+                        background-image: none;
+                        background-color: rgba(253, 255, 252, 0.9);
+                        cursor: pointer;
+                        -webkit-appearance: menulist;
+                        font-size: 12px;
+                        background-color: #fdfffc;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_header__N29ZMB3H
+                        > .rb_languages__pgMdQGex
+                        > .rb_container__B_HqgrcP
+                        > select.rb_true-select__ubJCGEA0 {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        opacity: 0;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_header__N29ZMB3H
+                        > .rb_languages__pgMdQGex
+                        > .rb_container__B_HqgrcP
+                        > select.rb_fake-select___gu9vAk0 {
+                        vertical-align: top;
+                        min-width: 40px;
+                        pointer-events: none;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f {
+                        position: relative;
+                        min-height: 30px;
+                        padding: 16px 5px;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_translated-from__Rg3Z4nYm {
+                        position: absolute;
+                        top: 4px;
+                        right: 8px;
+                        color: #2ec4b6;
+                        font-size: 12px;
+                        cursor: help;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_original__hd5JpXWz {
+                        max-height: 116px;
+                        margin-bottom: 7px;
+                        padding: 0 8px;
+                        font-style: italic;
+                        word-break: break-word;
+                        overflow: auto;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_original__hd5JpXWz > .rb_pronunciation-btn__qAkUd2ko {
+                        display: inline-block;
+                        width: 22px;
+                        margin-right: 8px;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_original__hd5JpXWz > .rb_transcription-loader__tv6jbH4N {
+                        height: 21px;
+                        text-align: center;
+                        cursor: help;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_original__hd5JpXWz > .rb_transcription-loader__tv6jbH4N > i {
+                        position: absolute;
+                        margin-top: 5px;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_original__hd5JpXWz > .rb_transcription__P98orgcx {
+                        margin-top: 5px;
+                        margin-left: 30px;
+                        font-style: italic;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_translations__NEwzDOF1 {
+                        max-height: 250px;
+                        padding: 0 8px;
+                        overflow: auto;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7:not(:first-child) {
+                        margin-top: 10px;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_pos-header__EJHCOtCn {
+                        display: flex;
+                        border-bottom: 1px dotted #b8ebe6;
+                        justify-content: flex-end;
+                        color: #73d7ce;
+                        font-size: 0.9em;
+                        font-style: italic;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_pos-header__EJHCOtCn
+                        > .rb_expand-terms__uhOWHm1t {
+                        flex-grow: 1;
+                        text-align: left;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_pos-header__EJHCOtCn
+                        > .rb_expand-terms__uhOWHm1t
+                        > i.rb_upside-down__WSqjkAme:before {
+                        transform: rotate(180deg);
+                        display: inline-block;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_pos-header__EJHCOtCn
+                        > .rb_expand-terms__uhOWHm1t
+                        > i:before {
+                        margin: 0;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_pos-header__EJHCOtCn
+                        > .rb_expand-terms__uhOWHm1t:hover,
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_pos-header__EJHCOtCn
+                        > .rb_expand-terms__uhOWHm1t:focus {
+                        color: #2ec4b6;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_pos-header__EJHCOtCn
+                        > .rb_expand-terms__uhOWHm1t:hover
+                        > i,
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_pos-header__EJHCOtCn
+                        > .rb_expand-terms__uhOWHm1t:focus
+                        > i {
+                        transform: scale(1.2);
+                        display: inline-block;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_term-line__UgsirTav {
+                        display: flex;
+                        min-height: 28px;
+                        padding: 4px 0;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_term-line__UgsirTav
+                        > .rb_checkbox__o45yZbLM {
+                        display: inline-flex;
+                        width: 14px;
+                        height: 14px;
+                        margin-right: 5px;
+                        border: 1px solid #011627;
+                        border-radius: 2px;
+                        outline: none;
+                        flex-shrink: 0;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_term-line__UgsirTav
+                        > .rb_checkbox__o45yZbLM
+                        > i {
+                        display: none;
+                        color: #011627;
+                        font-size: 11px;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_term-line__UgsirTav
+                        > .rb_checkbox__o45yZbLM
+                        > i:before {
+                        margin: 0;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_term-line__UgsirTav
+                        > .rb_checkbox__o45yZbLM:focus {
+                        border-color: #cc7f16;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_term-line__UgsirTav
+                        > .rb_checkbox__o45yZbLM.rb_checked__mliZ5TaM
+                        > i {
+                        display: inline;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_term-line__UgsirTav:hover
+                        > .rb_checkbox__o45yZbLM {
+                        box-shadow: inset 0 0 4px #73d7ce;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_term-line__UgsirTav
+                        > .rb_term__X8n1Cmk0 {
+                        min-height: 20px;
+                        max-height: 116px;
+                        flex-grow: 1;
+                        word-break: break-word;
+                        overflow: auto;
+                    }
+                    .rb_wrapper__ITM3k_JA
+                        > .rb_translation-popup__RzSFKJJk
+                        > .rb_content-body__Rl04Y73f
+                        > .rb_translations__NEwzDOF1
+                        > .rb_pos-wrapper__YCAl5mr7
+                        > .rb_term-line__UgsirTav
+                        > input {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 0;
+                        padding: 0;
+                        border: none;
+                        flex-grow: 1;
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_translations__NEwzDOF1 > .rb_add-custom__WYhGEpDg {
+                        display: flex;
+                        width: 14px;
+                        height: 14px;
+                        margin-top: 7px;
+                        border: 1px solid #011627;
+                        border-radius: 2px;
+                        outline: none;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_translations__NEwzDOF1 > .rb_add-custom__WYhGEpDg > i {
+                        color: #1f837a;
+                        font-size: 10px;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_translations__NEwzDOF1 > .rb_add-custom__WYhGEpDg > i:before {
+                        margin: 0;
+                    }
+                    .rb_wrapper__ITM3k_JA > .rb_translation-popup__RzSFKJJk > .rb_content-body__Rl04Y73f > .rb_translations__NEwzDOF1 > .rb_add-custom__WYhGEpDg:focus {
+                        border-color: #cc7f16;
+                    }</style
+                ><style>
+                    .rb_btn__nIvjkmLX:not(.rb_keep-cursor__PY5uQj5n) {
+                        cursor: pointer;
+                    }
+                    .rb_btn__nIvjkmLX:not(.rb_keep-cursor__PY5uQj5n).rb_disabled__JhfcPKo5 {
+                        cursor: not-allowed;
+                    }</style
+                ><style>
+                    .icon-pencil:before {
+                        content: "";
+                    }
+                    .icon-ok:before {
+                        content: "";
+                    }
+                    .icon-ccw:before {
+                        content: "";
+                    }
+                    .icon-globe:before {
+                        content: "";
+                    }
+                    .icon-info-circled:before {
+                        content: "";
+                    }
+                    .icon-cancel:before {
+                        content: "";
+                    }
+                    .icon-edit:before {
+                        content: "";
+                    }
+                    .icon-plus:before {
+                        content: "";
+                    }
+                    .icon-bookmark:before {
+                        content: "";
+                    }
+                    .icon-settings:before {
+                        content: "";
+                    }
+                    .icon-down-1:before {
+                        content: "";
+                    }
+                    .icon-up-1:before {
+                        content: "";
+                    }
+                    .icon-heart:before {
+                        content: "";
+                    }
+                    .icon-export:before {
+                        content: "";
+                    }
+                    .icon-keyboard-2:before {
+                        content: "";
+                    }
+                    .icon-ok-circled:before {
+                        content: "";
+                    }
+                    .icon-cancel-circled:before {
+                        content: "";
+                    }
+                    .icon-translate:before {
+                        content: "";
+                    }
+                    .icon-anki:before {
+                        content: "";
+                    }
+                    .icon-anki-1:before {
+                        content: "";
+                    }
+                    .icon-acc-basic:before {
+                        content: "";
+                    }
+                    .icon-acc-subscriber:before {
+                        content: "";
+                    }
+                    .icon-rb-ico:before {
+                        content: "";
+                    }
+                    .icon-cog:before {
+                        content: "";
+                    }
+                    .icon-login:before {
+                        content: "";
+                    }
+                    .icon-logout:before {
+                        content: "";
+                    }
+                    .icon-arrow-down-bold:before {
+                        content: "";
+                    }
+                    .icon-scissors:before {
+                        content: "";
+                    }
+                    .icon-home:before {
+                        content: "";
+                    }
+                    .icon-mute:before {
+                        content: "";
+                    }
+                    .icon-sound:before {
+                        content: "";
+                    }
+                    .icon-left-bold:before {
+                        content: "";
+                    }
+                    .icon-down:before {
+                        content: "";
+                    }
+                    .icon-up:before {
+                        content: "";
+                    }
+                    .icon-switch:before {
+                        content: "";
+                    }
+                    .icon-graduation-cap-1:before {
+                        content: "";
+                    }
+                    .icon-floppy:before {
+                        content: "";
+                    }
+                    .icon-facebook:before {
+                        content: "";
+                    }
+                    .icon-webstore:before {
+                        content: "";
+                    }
+                    .icon-mail:before {
+                        content: "";
+                    }
+                    .icon-graduation-cap:before {
+                        content: "";
+                    }
+                    .icon-emo-happy:before {
+                        content: "";
+                    }
+                    .icon-emo-unhappy:before {
+                        content: "";
+                    }
+                    .icon-spin1:before {
+                        content: "";
+                    }
+                    .icon-link-ext:before {
+                        content: "";
+                    }
+                    .icon-bookmark-empty:before {
+                        content: "";
+                    }
+                    .icon-filter:before {
+                        content: "";
+                    }
+                    .icon-paste:before {
+                        content: "";
+                    }
+                    .icon-angle-double-left:before {
+                        content: "";
+                    }
+                    .icon-angle-double-right:before {
+                        content: "";
+                    }
+                    .icon-angle-left:before {
+                        content: "";
+                    }
+                    .icon-angle-right:before {
+                        content: "";
+                    }
+                    .icon-angle-down:before {
+                        content: "";
+                    }
+                    .icon-info:before {
+                        content: "";
+                    }
+                    .icon-minus-squared:before {
+                        content: "";
+                    }
+                    .icon-export-alt:before {
+                        content: "";
+                    }
+                    .icon-expand-right:before {
+                        content: "";
+                    }
+                    .icon-plus-squared:before {
+                        content: "";
+                    }
+                    .icon-language:before {
+                        content: "";
+                    }
+                    .icon-sliders:before {
+                        content: "";
+                    }
+                    .icon-trash:before {
+                        content: "";
+                    }
+                    .icon-clone:before {
+                        content: "";
+                    }
+                    .icon-question-circle-o:before {
+                        content: "";
+                    }
+                    .icon-user-circle:before {
+                        content: "";
+                    }
+                    .icon-twitter:before {
+                        content: "";
+                    }
+                    .icon-gplus:before {
+                        content: "";
+                    }
+                    .icon-linkedin:before {
+                        content: "";
+                    }
+                    [class^="icon-"]:before,
+                    [class*=" icon-"]:before {
+                        display: inline-block;
+                        width: 1em;
+                        margin-right: 0.2em;
+                        margin-left: 0.2em;
+                        font-family: "rbicon";
+                        font-variant: normal;
+                        font-weight: normal;
+                        font-style: normal;
+                        text-transform: none;
+                        text-align: center;
+                        text-decoration: inherit;
+                        -webkit-font-smoothing: antialiased;
+                        speak: none;
+                    }</style
+                ><style>
+                    @keyframes rb_spin__mStYih5c {
+                        from {
+                            transform: rotate(0deg);
+                        }
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    .rb_spin__mStYih5c {
+                        display: inline-block;
+                        font-size: 14px;
+                    }
+                    :root:not([e2e]) .rb_spin__mStYih5c {
+                        animation: rb_spin__mStYih5c 1s infinite linear;
+                    }</style
+                ><style>
+                    .rb_loading__xdjtryhI,
+                    .rb_loading__xdjtryhI > i {
+                        cursor: wait;
+                    }</style
+                ><style>
+                    @keyframes rb_zoom-in-out__GjODFPIN {
+                        0% {
+                            transform: translateX(-50%) scale(0.9);
+                        }
+                        50% {
+                            transform: translateX(-50%) scale(1.1);
+                        }
+                        100% {
+                            transform: translateX(-50%) scale(1);
+                        }
+                    }
+                    .rb_bubble__XG8tV_49 {
+                        position: absolute;
+                        z-index: 1009;
+                        transform: translateX(-50%);
+                        width: 28px;
+                        height: 28px;
+                        border-radius: 4px;
+                        box-shadow: 0 0 8px rgba(1, 22, 39, 0.3);
+                        background-color: #2ec4b6;
+                        animation: rb_zoom-in-out__GjODFPIN 200ms ease-out;
+                        transition: box-shadow 150ms ease-out;
+                    }
+                    .rb_bubble__XG8tV_49 > i {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        color: #fdfffc;
+                        font-size: 18px;
+                        line-height: 28px;
+                        text-align: center;
+                        text-shadow: 0 1px #20897f;
+                    }
+                    .rb_bubble__XG8tV_49 > i:before {
+                        margin: 0;
+                    }
+                    .rb_bubble__XG8tV_49:active > i {
+                        text-shadow: 0 -1px #20897f;
+                    }</style
+                ><style>
+                    ::-webkit-scrollbar {
+                        width: 8px;
+                    }
+                    ::-webkit-scrollbar-thumb {
+                        border-radius: 8px;
+                        background-color: rgba(0, 0, 0, 0.45);
+                    }
+                    main {
+                        all: initial;
+                        font-size: 16px;
+                        font-family: Georgia, Trebuchet MS, Helvetica, Helvetica Neue;
+                        -webkit-font-smoothing: antialiased;
+                    }
+                    main[data-e2e] * {
+                        transition: none !important;
+                        animation: none !important;
+                    }
+                    * {
+                        box-sizing: border-box;
+                    }
+                    input,
+                    button,
+                    select {
+                        outline: none;
+                        font-family: Georgia, Trebuchet MS, Helvetica, Helvetica Neue;
+                        -webkit-font-smoothing: antialiased;
+                    }
+                </style></template
+            >
+        </div>
+    </body>
+</html>
