@@ -7,6 +7,8 @@ $(document).ready(function () {
         CountDownDay("22/01/2024", ".text-counter-itest");
         CountDownDay("16/06/2024", ".text-counter-kttt");
         CountDownDay("20/06/2024", ".text-counter-tacnoto");
+        CountDownDay("22/08/2024", ".text-counter-cnxh");
+        CountDownDay("22/10/2024", ".text-counter-tacdr");
     }, 1000);
 });
 
