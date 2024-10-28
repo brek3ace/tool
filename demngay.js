@@ -10,6 +10,7 @@ $(document).ready(function () {
         CountDownDay("22/08/2024", ".text-counter-cnxh");
         CountDownDay("22/10/2024", ".text-counter-tacdr");
         CountDownDay("27/10/2024", ".text-counter-pldc");
+        CountDownDay("28/10/2024", ".text-counter-tthcm");
     }, 1000);
 });
 
